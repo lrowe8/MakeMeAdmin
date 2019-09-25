@@ -42,7 +42,7 @@
         <?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
       <?endif ?>
       <Directory Id="$(var.PlatformProgramFilesFolder)">
-        <Directory Id="INSTALLFOLDER" Name="Privileges">
+        <Directory Id="INSTALLFOLDER" Name="Pluralsight">
           <Component Id="ElevationUserInterface" Guid="562B228B-6029-457D-96C9-6B4BCA69660D">
             <File Id="ElevationUserInterfaceExe" Name="$(var.LocalUI.TargetFileName)" Source="$(var.LocalUI.TargetPath)" KeyPath="yes" />
             <Shortcut Id="LocalUserInferfaceShortcut" Directory="ProgramMenuFolder" Name="Privileges" Description="Privileges Local User Interface" Advertise="yes" WorkingDirectory="INSTALLDIR" Icon="SecurityLock.ico" IconIndex="0" />

@@ -84,14 +84,6 @@
       <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
       <RefTargetDir>INSTALLFOLDER</RefTargetDir>
     </ProjectReference>
-    <ProjectReference Include="..\RemoteUI\RemoteUI.csproj">
-      <Name>RemoteUI</Name>
-      <Project>{d64e40bb-9dac-4491-8406-2ca2f2853f76}</Project>
-      <Private>True</Private>
-      <DoNotHarvest>True</DoNotHarvest>
-      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
-      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
-    </ProjectReference>
     <ProjectReference Include="..\Service\Service.csproj">
       <Name>Service</Name>
       <Project>{416656dc-d499-498b-8acf-6502a13efc9e}</Project>
@@ -156,7 +148,7 @@
 	-->
   <Target Name="BeforeBuild">
     <!-- Get the assembly version of the service .exe file. -->
-    <GetAssemblyIdentity AssemblyFiles="..\Service\bin\$(Configuration) $(Platform)\MakeMeAdminService.exe">
+    <GetAssemblyIdentity AssemblyFiles="..\Service\bin\$(Configuration) $(Platform)\PrivilegesService.exe">
       <Output TaskParameter="Assemblies" ItemName="AsmInfo" />
     </GetAssemblyIdentity>
     <CreateProperty Value="%(AsmInfo.Version)">
