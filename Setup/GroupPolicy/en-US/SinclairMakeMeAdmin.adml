@@ -4,12 +4,12 @@
                            xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
                            revision="1.0"
                            schemaVersion="1.0">
-  <displayName>Make Me Admin application policy file</displayName>
+  <displayName>Privileges application policy file</displayName>
   <description></description>
   <resources>
     <stringTable>
-      <string id="MakeMeAdminDisplayName">Make Me Admin</string>
-      <string id="MakeMeAdminExplainText">Make Me Admin allows users to grant themselves administrator privileges for a defined period of time.</string>
+      <string id="MakeMeAdminDisplayName">Privileges</string>
+      <string id="MakeMeAdminExplainText">Privileges allows users to grant themselves administrator privileges for a defined period of time.</string>
 
       <string id="AllowedEntitiesDisplayName">Allowed Security IDs (Local)</string>
       <string id="AllowedEntitiesExplainText">Specifies the security IDs (SIDs) of the users or groups allowed to gain administrative rights on the local computer.</string>

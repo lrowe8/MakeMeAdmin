@@ -26,12 +26,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Make Me Admin Process Communication Library")]
+[assembly: AssemblyTitle("Privileges Process Communication Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Sinclair Community College")]
-[assembly: AssemblyProduct("Make Me Admin")]
-[assembly: AssemblyCopyright("Copyright © 2010-2019, Sinclair Community College")]
+[assembly: AssemblyCompany("Pluralsight")]
+[assembly: AssemblyProduct("Privileges")]
+[assembly: AssemblyCopyright("Copyright © 2010-2019, Pluralsight")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

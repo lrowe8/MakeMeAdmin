@@ -133,7 +133,7 @@
     <value>Local machine context is null.</value>
   </data>
   <data name="RemovalReasonServiceStopped" xml:space="preserve">
-    <value>Make Me Admin service stopped</value>
+    <value>Privileges service stopped</value>
   </data>
   <data name="RemovalReasonTimeout" xml:space="preserve">
     <value>Timeout elapsed</value>
@@ -148,7 +148,7 @@
     <value>User requested removal</value>
   </data>
   <data name="RemovingUserFromList" xml:space="preserve">
-    <value>Removing the user from Make Me Admin's list.</value>
+    <value>Removing the user from Privileges's list.</value>
   </data>
   <data name="RemovingUserReturnedError" xml:space="preserve">
     <value>Removing user {0} ({1}) from the Administrators group returned error code {1}.</value>

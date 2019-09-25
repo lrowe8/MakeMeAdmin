@@ -1,6 +1,6 @@
-Make Me Admin Contributors
+Privileges Contributors
 
-This is the official list of the Make Me Admin project contributors.
+This is the official list of the Privileges project contributors.
 
 * **[Patrick Seymour](https://makemeadmin.com)**
 

@@ -25,7 +25,7 @@
              class="Machine"
              displayName="$(string.AllowedEntitiesDisplayName)"
              explainText="$(string.AllowedEntitiesExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.AllowedEntitiesMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -38,7 +38,7 @@
              class="Machine"
              displayName="$(string.RemoteAllowedEntitiesDisplayName)"
              explainText="$(string.RemoteAllowedEntitiesExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.RemoteAllowedEntitiesMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -51,7 +51,7 @@
              class="Machine"
              displayName="$(string.AutomaticallyAddAllowedEntitiesDisplayName)"
              explainText="$(string.AutomaticallyAddAllowedEntitiesExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.AllowedAutomaticallyAddMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -64,7 +64,7 @@
              class="Machine"
              displayName="$(string.DeniedEntitiesDisplayName)"
              explainText="$(string.DeniedEntitiesExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.DeniedEntitiesMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -77,7 +77,7 @@
              class="Machine"
              displayName="$(string.RemoteDeniedEntitiesDisplayName)"
              explainText="$(string.RemoteDeniedEntitiesExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.RemoteDeniedEntitiesMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -90,7 +90,7 @@
              class="Machine"
              displayName="$(string.AutomaticallyAddDeniedEntitiesDisplayName)"
              explainText="$(string.AutomaticallyAddDeniedEntitiesExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.DeniedAutomaticallyAddMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -103,7 +103,7 @@
              class="Machine"
              displayName="$(string.AdminRightsTimeoutDisplayName)"
              explainText="$(string.AdminRightsTimeoutExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              valueName="Admin Rights Timeout"
              presentation="$(presentation.Admin_Rights_Timeout_Spin)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin"></parentCategory>
@@ -117,7 +117,7 @@
             class="Machine"
             displayName="$(string.TimeoutOverrideDisplayName)"
             explainText="$(string.TimeoutOverrideExplainText)"
-            key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin\Timeout Overrides"
+            key="SOFTWARE\Policies\Pluralsight\Privileges\Timeout Overrides"
             presentation="$(presentation.TimeoutOverrideList_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -130,7 +130,7 @@
              class="Machine"
              displayName="$(string.RemoveOnLogoutDisplayName)"
              explainText="$(string.RemoveOnLogoutExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              valueName="Remove Admin Rights On Logout">
       <parentCategory ref="makemeadmin:MakeMeAdmin"></parentCategory>
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -142,7 +142,7 @@
              class="Machine"
              displayName="$(string.OverrideOutsideProcessDisplayName)"
              explainText="$(string.OverrideOutsideProcessExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              valueName="Override Removal By Outside Process">
       <parentCategory ref="makemeadmin:MakeMeAdmin"></parentCategory>
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -154,7 +154,7 @@
              class="Machine"
              displayName="$(string.AllowRemoteRequestsDisplayName)"
              explainText="$(string.AllowRemoteRequestsExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              valueName="Allow Remote Requests">
       <parentCategory ref="makemeadmin:MakeMeAdmin"></parentCategory>
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -166,7 +166,7 @@
              class="Machine"
              displayName="$(string.EndRemoteSessionsDisplayName)"
              explainText="$(string.EndRemoteSessionsExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              valueName="End Remote Sessions Upon Expiration">
       <parentCategory ref="makemeadmin:MakeMeAdmin"></parentCategory>
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -178,7 +178,7 @@
              class="Machine"
              displayName="$(string.SyslogServersDisplayName)"
              explainText="$(string.SyslogServersExplainText)"
-             key="SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+             key="SOFTWARE\Policies\Pluralsight\Privileges"
              presentation="$(presentation.SyslogMultiText_Presentation)" >
       <parentCategory ref="makemeadmin:MakeMeAdmin" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />

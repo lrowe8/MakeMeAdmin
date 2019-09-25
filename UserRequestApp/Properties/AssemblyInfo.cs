@@ -26,12 +26,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Make Me Admin User Interface")]
+[assembly: AssemblyTitle("Privileges User Interface")]
 [assembly: AssemblyDescription("Allows users to add themselves to and remove themselves from the local Administrators group.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Sinclair Community College")]
-[assembly: AssemblyProduct("Make Me Admin")]
-[assembly: AssemblyCopyright("Copyright © 2010-2019, Sinclair Community College")]
+[assembly: AssemblyCompany("Pluralsight")]
+[assembly: AssemblyProduct("Privileges")]
+[assembly: AssemblyCopyright("Copyright © 2010-2019, Pluralsight")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

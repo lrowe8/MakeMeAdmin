@@ -89,7 +89,7 @@
             this.MinimizeBox = false;
             this.Name = "SubmitRequestForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Make Me Admin Remote";
+            this.Text = "Privileges Remote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SubmitRequestForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

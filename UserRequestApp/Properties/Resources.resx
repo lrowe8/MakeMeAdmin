@@ -121,7 +121,7 @@
     <value>Ready.</value>
   </data>
   <data name="ApplicationName" xml:space="preserve">
-    <value>Make Me Admin</value>
+    <value>Privileges</value>
   </data>
   <data name="CheckingAdminStatus" xml:space="preserve">
     <value>Checking administrator status...</value>
@@ -149,7 +149,7 @@
     <value>You already have administrator rights.</value>
   </data>
   <data name="UIMessageEnsureServiceRunning" xml:space="preserve">
-    <value>Please make sure the Make Me Admin service is running.</value>
+    <value>Please make sure the Privileges service is running.</value>
   </data>
   <data name="UIMessageErrorWhileAdding" xml:space="preserve">
     <value>An error occurred while adding you to the Administrators group.</value>

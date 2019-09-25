@@ -32,7 +32,7 @@
             // MakeMeAdminService
             // 
             this.CanHandleSessionChangeEvent = true;
-            this.ServiceName = "MakeMeAdmin";
+            this.ServiceName = "Privileges";
 
         }
 

@@ -25,7 +25,7 @@ namespace SinclairCC.MakeMeAdmin
     /// </summary>
     public class Syslog
     {
-        private const string AppName = "Make Me Admin";
+        private const string AppName = "Privileges";
 
         /// <summary>
         /// The name or IP address of the syslog server.

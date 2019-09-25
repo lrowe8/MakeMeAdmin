@@ -81,7 +81,7 @@ namespace SinclairCC.MakeMeAdmin
             get
             {
                 const string EncryptedSettingsFile = "users.xml";
-                string filePath = System.IO.Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Make Me Admin");
+                string filePath = System.IO.Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Privileges");
                 filePath = System.IO.Path.Combine(filePath, EncryptedSettingsFile);
                 return filePath;
             }
@@ -92,7 +92,7 @@ namespace SinclairCC.MakeMeAdmin
             get
             {
                 const string EncryptedSettingsFile = "users.xml";
-                string filePath = System.IO.Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Make Me Admin");
+                string filePath = System.IO.Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Privileges");
                 filePath = System.IO.Path.Combine(filePath, EncryptedSettingsFile);
                 return filePath;
             }

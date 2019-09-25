@@ -11,8 +11,8 @@
           <target state="final">La requête a été envoyée depuis l'hôte {0}.</target>
         </trans-unit>
         <trans-unit id="RemovalReasonServiceStopped" translate="yes" xml:space="preserve">
-          <source>Make Me Admin service stopped</source>
-          <target state="final">Service Make Me Admin arrêté</target>
+          <source>Privileges service stopped</source>
+          <target state="final">Service Privileges arrêté</target>
         </trans-unit>
         <trans-unit id="RemovalReasonTimeout" translate="yes" xml:space="preserve">
           <source>Timeout elapsed</source>
@@ -67,8 +67,8 @@
           <target state="final">Rajout de l'utilisateur au groupe Administrateurs.</target>
         </trans-unit>
         <trans-unit id="RemovingUserFromList" translate="yes" xml:space="preserve">
-          <source>Removing the user from Make Me Admin's list.</source>
-          <target state="final">Suppression de l'utilisateur de la liste de Make Me Admin.</target>
+          <source>Removing the user from Privileges's list.</source>
+          <target state="final">Suppression de l'utilisateur de la liste de Privileges.</target>
         </trans-unit>
         <trans-unit id="UserRemovedByOutsideProcess" translate="yes" xml:space="preserve">
           <source>User {0} ({1}) has been removed from the Administrators group by an outside process.</source>

@@ -16,7 +16,7 @@
     <value>La requête a été envoyée depuis l'hôte {0}.</value>
   </data>
   <data name="RemovalReasonServiceStopped" xml:space="preserve">
-    <value>Service Make Me Admin arrêté</value>
+    <value>Service Privileges arrêté</value>
   </data>
   <data name="RemovalReasonTimeout" xml:space="preserve">
     <value>Délai d'attente écoulé</value>
@@ -58,7 +58,7 @@
     <value>Rajout de l'utilisateur au groupe Administrateurs.</value>
   </data>
   <data name="RemovingUserFromList" xml:space="preserve">
-    <value>Suppression de l'utilisateur de la liste de Make Me Admin.</value>
+    <value>Suppression de l'utilisateur de la liste de Privileges.</value>
   </data>
   <data name="UserRemovedByOutsideProcess" xml:space="preserve">
     <value>L'utilisateur {0} ({1}) a été retiré du groupe Administrateurs par un processus externe.</value>

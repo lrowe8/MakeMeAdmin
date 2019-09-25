@@ -82,7 +82,7 @@ namespace SinclairCC.MakeMeAdmin
         /// </summary>
         private void SetFormText()
         {
-            System.Text.StringBuilder formText = new System.Text.StringBuilder("Make Me Admin Remote ");
+            System.Text.StringBuilder formText = new System.Text.StringBuilder("Privileges Remote ");
 
             // Append to the form text the first three parts of the assembly's version number.
             formText.Append(Assembly.GetExecutingAssembly().GetName().Version.ToString(3));
@@ -122,7 +122,7 @@ namespace SinclairCC.MakeMeAdmin
         private void RequestAdminRights(string hostName)
         {
             // The address of the remote computer's service host.
-            string remoteHostAddress = string.Format("net.tcp://{0}/MakeMeAdmin/Service", hostName);
+            string remoteHostAddress = string.Format("net.tcp://{0}/Privileges/Service", hostName);
 
             // Open a connection to the remote host.
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.Transport);
@@ -177,11 +177,11 @@ namespace SinclairCC.MakeMeAdmin
                         messageBoxText.Append(": ");
                         messageBoxText.Append(System.Environment.NewLine);
                         messageBoxText.Append("{0}");
-                        resultTask.Exception.Flatten().Handle(excep => { MessageBox.Show(string.Format(messageBoxText.ToString(), excep.Message), "Make Me Admin Remote", MessageBoxButtons.OK, MessageBoxIcon.Error); return true; });
+                        resultTask.Exception.Flatten().Handle(excep => { MessageBox.Show(string.Format(messageBoxText.ToString(), excep.Message), "Privileges Remote", MessageBoxButtons.OK, MessageBoxIcon.Error); return true; });
                     }
                     else
                     {
-                        MessageBox.Show(string.Format(Properties.Resources.AdminRightsRequestedOnHost, hostName), "Make Me Admin Remote", MessageBoxButtons.OK);
+                        MessageBox.Show(string.Format(Properties.Resources.AdminRightsRequestedOnHost, hostName), "Privileges Remote", MessageBoxButtons.OK);
                     }                    
                 });
         }

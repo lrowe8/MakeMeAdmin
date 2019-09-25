@@ -44,7 +44,7 @@ namespace SinclairCC.MakeMeAdmin
         {
             get
             {
-                return string.Format("net.tcp://{0}/MakeMeAdmin/Service", FullyQualifiedHostName);
+                return string.Format("net.tcp://{0}/Privileges/Service", FullyQualifiedHostName);
             }
         }
 
@@ -55,7 +55,7 @@ namespace SinclairCC.MakeMeAdmin
         {
             get
             {
-                return string.Format("net.pipe://{0}/MakeMeAdmin/Service", FullyQualifiedHostName);
+                return string.Format("net.pipe://{0}/Privileges/Service", FullyQualifiedHostName);
             }
         }
 

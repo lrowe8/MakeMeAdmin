@@ -19,7 +19,7 @@ namespace SinclairCC.MakeMeAdmin.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -70,7 +70,7 @@ namespace SinclairCC.MakeMeAdmin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Make Me Admin.
+        ///   Looks up a localized string similar to Privileges.
         /// </summary>
         public static string ApplicationName {
             get {
@@ -152,7 +152,7 @@ namespace SinclairCC.MakeMeAdmin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please make sure the Make Me Admin service is running..
+        ///   Looks up a localized string similar to Please make sure the Privileges service is running..
         /// </summary>
         public static string UIMessageEnsureServiceRunning {
             get {

@@ -16,7 +16,7 @@
     <value>Prêt.</value>
   </data>
   <data name="ApplicationName" xml:space="preserve">
-    <value>Make Me Admin</value>
+    <value>Privileges</value>
   </data>
   <data name="CheckingAdminStatus" xml:space="preserve">
     <value>Vérification du status d'administrateur...</value>
@@ -49,7 +49,7 @@
     <value>tracé de la pile</value>
   </data>
   <data name="UIMessageEnsureServiceRunning" xml:space="preserve">
-    <value>Veuillez s'il vous plaît vous assurer que le service Make Me Admin est démarré.</value>
+    <value>Veuillez s'il vous plaît vous assurer que le service Privileges est démarré.</value>
   </data>
   <data name="UIMessageErrorWhileAdding" xml:space="preserve">
     <value>Une erreur s'est produite lors de votre ajout au groupe Administrateurs.</value>
