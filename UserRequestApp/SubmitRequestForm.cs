@@ -57,6 +57,11 @@ namespace SinclairCC.MakeMeAdmin
         private bool userWasAdminOnLastCheck = false;
 
         /// <summary>
+        /// Variable that is used to store the admin expiration time
+        /// </summary>
+        private DateTime expireTime = DateTime.MinValue;
+
+        /// <summary>
         /// Timer to notify users when their administrator rights expire.
         /// </summary>
         private System.Timers.Timer notifyIconTimer;
@@ -68,9 +73,6 @@ namespace SinclairCC.MakeMeAdmin
         public SubmitRequestForm()
         {
             this.InitializeComponent();
-
-            this.Icon = Properties.Resources.SecurityLock;
-            this.notifyIcon.Icon = Properties.Resources.SecurityLock;
 
             this.SetFormText();
 
@@ -96,6 +98,7 @@ namespace SinclairCC.MakeMeAdmin
         void NotifyIconTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             this.UpdateUserAdministratorStatus();
+            TooltipUpdate();
 
             if (this.userIsAdmin != this.userWasAdminOnLastCheck)
             { // The user's administrator status has changed.
@@ -110,12 +113,48 @@ namespace SinclairCC.MakeMeAdmin
                 {
                     this.notifyIconTimer.Stop();
                     notifyIcon.ShowBalloonTip(5000, Properties.Resources.ApplicationName, string.Format(Properties.Resources.UIMessageRemovedFromGroup, LocalAdministratorGroup.LocalAdminGroupName), ToolTipIcon.Info);
+                    this.notifyIcon.Text = "Privileges 2.3.0";
                 }
 
                 namedPipeFactory.Close();
             }
         }
 
+        /// <summary>
+        /// Handles the admin countdown event for the notification area icon.
+        /// </summary>
+        /// <param name="sender">
+        /// The timer whose Elapsed event is firing.
+        /// </param>
+        /// <param name="e">
+        /// Data related to the event.
+        /// </param>
+        void TooltipUpdate()
+        {
+            DateTime now = DateTime.Now;
+
+            if (now < expireTime)
+            {
+                String toolText = "Time Remaining: ";
+                TimeSpan diff = expireTime.Subtract(now);
+
+                if ((diff.Hours) > 0)
+                {
+                    toolText += (diff.Hours.ToString() + " hour(s) ");
+                }
+
+                if (diff.Minutes >= 1 || (toolText.Length == 0))
+                {
+                    toolText += (diff.Minutes.ToString() + " minute(s) ");
+                }
+                else
+                {
+                    toolText += (diff.Seconds.ToString() + " seconds");
+                }
+
+                this.notifyIcon.Text = toolText;
+            }
+        }
 
         /// <summary>
         /// Sets the form's text to the name of the application plus a partial version number.
@@ -149,13 +188,50 @@ namespace SinclairCC.MakeMeAdmin
         /// <param name="e">
         /// Data specific to this event.
         /// </param>
-        private void ClickSubmitButton(object sender, EventArgs e)
+        private void ClickRequestButton(object sender, EventArgs e)
         {
+            String buttonText = this.requestButton.Text;
             this.DisableButtons();
-            this.appStatus.Text = string.Format(Properties.Resources.UIMessageAddingToGroup, LocalAdministratorGroup.LocalAdminGroupName);
-            addUserBackgroundWorker.RunWorkerAsync();
+
+            if (buttonText == "Request Privileges")
+            {
+                TooltipUpdate();
+                this.appStatus.Text = string.Format(Properties.Resources.UIMessageAddingToGroup, LocalAdministratorGroup.LocalAdminGroupName);
+                addUserBackgroundWorker.RunWorkerAsync();
+            }
+            else
+            {
+                this.appStatus.Text = string.Format(Properties.Resources.UIMessageRemovingFromGroup, LocalAdministratorGroup.LocalAdminGroupName);
+                removeUserBackgroundWorker.RunWorkerAsync();
+            }
         }
 
+        /// <summary>
+        /// This function checks to see which item in the edit menu is selected.
+        /// </summary>
+        private void SetExpireTime()
+        {
+            if (min5ToolStripMenuItem.Checked)
+            {
+                expireTime = DateTime.Now.AddMinutes(5);
+            }
+            else if (min10ToolStripMenuItem.Checked)
+            {
+                expireTime = DateTime.Now.AddMinutes(10);
+            }
+            else if (min20ToolStripMenuItem.Checked)
+            {
+                expireTime = DateTime.Now.AddMinutes(20);
+            }
+            else if (hour1ToolStripMenuItem.Checked)
+            {
+                expireTime = DateTime.Now.AddHours(1);
+            }
+            else if (hours2ToolStripMenuItem.Checked)
+            {
+                expireTime = DateTime.Now.AddHours(2);
+            }
+        }
 
         /// <summary>
         /// This function runs when RunWorkerAsync() is called by the "grant admin rights" BackgroundWorker object.
@@ -172,9 +248,11 @@ namespace SinclairCC.MakeMeAdmin
             ChannelFactory<IAdminGroup> namedPipeFactory = new ChannelFactory<IAdminGroup>(binding, Settings.NamedPipeServiceBaseAddress);
             IAdminGroup channel = namedPipeFactory.CreateChannel();
 
+            SetExpireTime();
+
             try
             {
-                channel.AddUserToAdministratorsGroup();
+                channel.AddUserToAdministratorsGroup(expireTime);
             }
             catch (System.ServiceModel.EndpointNotFoundException)
             {
@@ -240,11 +318,9 @@ namespace SinclairCC.MakeMeAdmin
         /// <param name="e">
         /// Data specific to this event.
         /// </param>
-        private void ClickRemoveRightsButton(object sender, EventArgs e)
+        private void ClickCancelButton(object sender, EventArgs e)
         {
-            this.DisableButtons();
-            this.appStatus.Text = string.Format(Properties.Resources.UIMessageRemovingFromGroup, LocalAdministratorGroup.LocalAdminGroupName);
-            removeUserBackgroundWorker.RunWorkerAsync();
+            this.Close();
         }
 
 
@@ -319,8 +395,8 @@ namespace SinclairCC.MakeMeAdmin
         /// </summary>
         private void DisableButtons()
         {
-            this.addMeButton.Enabled = false;
-            this.removeMeButton.Enabled = false;
+            this.requestButton.Enabled = false;
+            this.cancelButton.Enabled = false;
         }
 
 
@@ -383,40 +459,50 @@ namespace SinclairCC.MakeMeAdmin
             bool userIsAuthorizedLocally = channel.UserIsAuthorized(Settings.LocalAllowedEntities, Settings.LocalDeniedEntities);
             namedPipeFactory.Close();
 
-            /*
-            bool userIsAuthorizedLocally = UserIsAuthorized(WindowsIdentity.GetCurrent(), Settings.LocalAllowedEntities, Settings.LocalDeniedEntities);
-            */
+
 
             // Enable the "grant admin rights" button, if the user is not already
             // an administrator and is authorized to obtain those rights.
-            this.addMeButton.Enabled = !this.userIsAdmin && userIsAuthorizedLocally;
-            if (addMeButton.Enabled)
+            if (!userIsAuthorizedLocally)
             {
-                addMeButton.Text = Properties.Resources.GrantRightsButtonText;
+                requestButton.Text = Properties.Resources.UIMessageUnauthorized;
             }
-            else if (this.userIsAdmin)
+            else
             {
-                addMeButton.Text = Properties.Resources.UIMessageAlreadyHaveRights;
-            }
-            else if (!userIsAuthorizedLocally)
-            {
-                addMeButton.Text = Properties.Resources.UIMessageUnauthorized;
-            }
+                if (!this.userIsAdmin)
+                {
+                    this.Icon = Properties.Resources.Locked;
+                    this.notifyIcon.Icon = Properties.Resources.Locked;
+                    this.requestButton.Text = "Request Privileges";
+                    this.pictureBox1.Image = Properties.Resources.Locked_Img;
+                    messageLabel.Text = Properties.Resources.GrantRightsButtonText;
 
-            // Enable the rights removal button if the user is directly a
-            // member of the administrators group.
-            this.removeMeButton.Enabled = this.userIsDirectAdmin;
+                    settingsToolStripMenuItem.Enabled = true;
+                }
+                else if (this.userIsAdmin)
+                {
+                    this.Icon = Properties.Resources.Unlocked;
+                    this.notifyIcon.Icon = Properties.Resources.Unlocked;
+                    requestButton.Text = "Remove Privileges";
+                    this.pictureBox1.Image = Properties.Resources.Unlocked_Img;
+                    messageLabel.Text = Properties.Resources.UIMessageAlreadyHaveRights;
+
+                    settingsToolStripMenuItem.Enabled = false;
+                }
+
+                /* If the edit menu is disable, disable everything within it */
+                foreach (ToolStripMenuItem item in settingsToolStripMenuItem.DropDownItems)
+                {
+                    item.Enabled = settingsToolStripMenuItem.Enabled;
+                }
+
+                this.requestButton.Enabled = true;
+                this.cancelButton.Enabled = true;
+
+                this.requestButton.Focus();
+            }
 
             this.appStatus.Text = Properties.Resources.ApplicationIsReady;
-
-            if (this.addMeButton.Enabled)
-            {
-                this.addMeButton.Focus();
-            }
-            else if (this.removeMeButton.Enabled)
-            {
-                this.removeMeButton.Focus();
-            }
         }
 
 
@@ -476,6 +562,22 @@ namespace SinclairCC.MakeMeAdmin
                 */
                 this.Close();
             }
+        }
+
+        private void MinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ToolStripMenuItem item in settingsToolStripMenuItem.DropDownItems)
+            {
+                item.Checked = false;
+            }
+
+            ((ToolStripMenuItem)sender).Checked = true;
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm about = new AboutForm();
+            about.ShowDialog();
         }
     }
 }

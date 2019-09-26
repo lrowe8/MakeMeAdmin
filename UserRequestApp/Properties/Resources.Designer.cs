@@ -97,7 +97,7 @@ namespace SinclairCC.MakeMeAdmin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grant Me Administrator Rights.
+        ///   Looks up a localized string similar to You are currently a Standard user.  Would you like to request Administrator privileges?&quot;.
         /// </summary>
         public static string GrantRightsButtonText {
             get {
@@ -108,10 +108,30 @@ namespace SinclairCC.MakeMeAdmin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        public static System.Drawing.Icon SecurityLock {
+        public static System.Drawing.Icon Locked {
             get {
-                object obj = ResourceManager.GetObject("SecurityLock", resourceCulture);
+                object obj = ResourceManager.GetObject("Locked", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Locked_Img {
+            get {
+                object obj = ResourceManager.GetObject("Locked_Img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -143,7 +163,7 @@ namespace SinclairCC.MakeMeAdmin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You already have administrator rights..
+        ///   Looks up a localized string similar to You are currently an Administrator.  Would you like to remove Administrator privileges and revert to a Standard user?.
         /// </summary>
         public static string UIMessageAlreadyHaveRights {
             get {
@@ -202,6 +222,26 @@ namespace SinclairCC.MakeMeAdmin.Properties {
         public static string UIMessageUnauthorized {
             get {
                 return ResourceManager.GetString("UIMessageUnauthorized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        public static System.Drawing.Icon Unlocked {
+            get {
+                object obj = ResourceManager.GetObject("Unlocked", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Unlocked_Img {
+            get {
+                object obj = ResourceManager.GetObject("Unlocked_Img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

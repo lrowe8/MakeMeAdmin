@@ -35,7 +35,7 @@ namespace SinclairCC.MakeMeAdmin
         /// <summary>
         /// Adds a user to the local Administrators group.
         /// </summary>
-        public void AddUserToAdministratorsGroup()
+        public void AddUserToAdministratorsGroup(DateTime expirationTime)
         {
             string remoteAddress = null;
 
@@ -65,7 +65,6 @@ namespace SinclairCC.MakeMeAdmin
             if (userIdentity != null)
             {
                 int timeoutMinutes = GetTimeoutForUser(userIdentity);
-                DateTime expirationTime = DateTime.Now.AddMinutes(timeoutMinutes);
                 LocalAdministratorGroup.AddUser(userIdentity, expirationTime, remoteAddress);
             }
         }

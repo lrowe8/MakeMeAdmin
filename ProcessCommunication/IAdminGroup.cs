@@ -20,6 +20,7 @@
 
 namespace SinclairCC.MakeMeAdmin
 {
+    using System;
     using System.ServiceModel;
 
     /// <summary>
@@ -32,7 +33,7 @@ namespace SinclairCC.MakeMeAdmin
         /// Adds a user to the Administrators group.
         /// </summary>
         [OperationContract]
-        void AddUserToAdministratorsGroup();
+        void AddUserToAdministratorsGroup(DateTime expirationTime);
 
         /// <summary>
         /// Removes a user from the Administrators group.
