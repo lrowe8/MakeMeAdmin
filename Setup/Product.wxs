@@ -29,8 +29,8 @@
       <Condition Level="0">INSTALLMAKEMEADMIN = "0"</Condition>
     </Feature>
     
-    <Icon Id="SecurityLock.ico" SourceFile="..\SecurityLock.ico"/>
-    <Property Id="ARPPRODUCTICON" Value="SecurityLock.ico" />
+    <Icon Id="SecurityLock.ico" SourceFile="..\Locked.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="Locked.ico" />
     <Property Id="ARPNOMODIFY" Value="yes" Secure="yes" />
     
     <Directory Id="TARGETDIR" Name="SourceDir">
