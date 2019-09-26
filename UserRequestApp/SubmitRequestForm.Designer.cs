@@ -167,6 +167,7 @@ namespace SinclairCC.MakeMeAdmin
             this.settingsToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubmitForm_MouseDown);
             // 
             // settingsToolStripMenuItem
             // 
@@ -177,6 +178,7 @@ namespace SinclairCC.MakeMeAdmin
             this.min20ToolStripMenuItem,
             this.hour1ToolStripMenuItem,
             this.hours2ToolStripMenuItem});
+            this.settingsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
             // 
@@ -242,12 +244,14 @@ namespace SinclairCC.MakeMeAdmin
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubmitForm_MouseDown);
             // 
             // messageLabel
             // 
             resources.ApplyResources(this.messageLabel, "messageLabel");
             this.messageLabel.ForeColor = System.Drawing.Color.White;
             this.messageLabel.Name = "messageLabel";
+            this.messageLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubmitForm_MouseDown);
             // 
             // appStatus
             // 
@@ -255,6 +259,7 @@ namespace SinclairCC.MakeMeAdmin
             resources.ApplyResources(this.appStatus, "appStatus");
             this.appStatus.ForeColor = System.Drawing.Color.White;
             this.appStatus.Name = "appStatus";
+            this.appStatus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubmitForm_MouseDown);
             // 
             // SubmitRequestForm
             // 

@@ -73,8 +73,7 @@ namespace SinclairCC.MakeMeAdmin
         /// Timer to notify users when their administrator rights expire.
         /// </summary>
         private System.Timers.Timer notifyIconTimer;
-
-
+               
         /// <summary>
         /// Initializes a new instance of the SubmitRequestForm class.
         /// </summary>

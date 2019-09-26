@@ -75,7 +75,7 @@
             this.closeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.closeButton.Location = new System.Drawing.Point(476, 151);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(112, 29);
+            this.closeButton.Size = new System.Drawing.Size(112, 31);
             this.closeButton.TabIndex = 0;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
