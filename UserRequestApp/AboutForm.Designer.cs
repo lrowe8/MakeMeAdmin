@@ -47,7 +47,7 @@
             // 
             // infoLabel
             // 
-            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoLabel.ForeColor = System.Drawing.Color.White;
             this.infoLabel.Location = new System.Drawing.Point(12, 62);
             this.infoLabel.Name = "infoLabel";
@@ -58,11 +58,11 @@
             // 
             // creditLabel
             // 
-            this.creditLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creditLabel.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.creditLabel.Location = new System.Drawing.Point(12, 141);
             this.creditLabel.Name = "creditLabel";
-            this.creditLabel.Size = new System.Drawing.Size(302, 39);
+            this.creditLabel.Size = new System.Drawing.Size(412, 39);
             this.creditLabel.TabIndex = 2;
             this.creditLabel.Text = "Based off of the Make Me Admin project by Patrick Seymour.\nhttps://github.com/pse" +
     "ymour/MakeMeAdmin";
@@ -71,7 +71,7 @@
             // 
             this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(38)))), ((int)(((byte)(84)))));
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.closeButton.Location = new System.Drawing.Point(476, 151);
             this.closeButton.Name = "closeButton";

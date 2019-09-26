@@ -160,16 +160,17 @@ namespace SinclairCC.MakeMeAdmin
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ForeColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.aboutToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // settingsToolStripMenuItem
             // 
+            this.settingsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.min5ToolStripMenuItem,
             this.min10ToolStripMenuItem,
@@ -181,38 +182,50 @@ namespace SinclairCC.MakeMeAdmin
             // 
             // min5ToolStripMenuItem
             // 
+            this.min5ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.min5ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.min5ToolStripMenuItem.Name = "min5ToolStripMenuItem";
             resources.ApplyResources(this.min5ToolStripMenuItem, "min5ToolStripMenuItem");
             this.min5ToolStripMenuItem.Click += new System.EventHandler(this.MinToolStripMenuItem_Click);
             // 
             // min10ToolStripMenuItem
             // 
+            this.min10ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.min10ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.min10ToolStripMenuItem.Name = "min10ToolStripMenuItem";
             resources.ApplyResources(this.min10ToolStripMenuItem, "min10ToolStripMenuItem");
             this.min10ToolStripMenuItem.Click += new System.EventHandler(this.MinToolStripMenuItem_Click);
             // 
             // min20ToolStripMenuItem
             // 
+            this.min20ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.min20ToolStripMenuItem.Checked = true;
             this.min20ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.min20ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.min20ToolStripMenuItem.Name = "min20ToolStripMenuItem";
             resources.ApplyResources(this.min20ToolStripMenuItem, "min20ToolStripMenuItem");
             this.min20ToolStripMenuItem.Click += new System.EventHandler(this.MinToolStripMenuItem_Click);
             // 
             // hour1ToolStripMenuItem
             // 
+            this.hour1ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.hour1ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.hour1ToolStripMenuItem.Name = "hour1ToolStripMenuItem";
             resources.ApplyResources(this.hour1ToolStripMenuItem, "hour1ToolStripMenuItem");
             this.hour1ToolStripMenuItem.Click += new System.EventHandler(this.MinToolStripMenuItem_Click);
             // 
             // hours2ToolStripMenuItem
             // 
+            this.hours2ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.hours2ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.hours2ToolStripMenuItem.Name = "hours2ToolStripMenuItem";
             resources.ApplyResources(this.hours2ToolStripMenuItem, "hours2ToolStripMenuItem");
             this.hours2ToolStripMenuItem.Click += new System.EventHandler(this.MinToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
@@ -263,6 +276,7 @@ namespace SinclairCC.MakeMeAdmin
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.FormLoad);
             this.VisibleChanged += new System.EventHandler(this.SubmitRequestForm_VisibleChanged);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubmitForm_MouseDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
